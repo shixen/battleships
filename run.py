@@ -22,5 +22,9 @@ def guess_ship(board):
     if guess_row == ship_row and guess_col == ship_col:
         print("Congrats you have sunk my battleship!")
 
-        
+    else:
+        if (guess_row < 0 or guess_row > 5) or (guess_col < 0 or guess_col > 5):
+            print("you must guess a number between 1-5")
+
+
 
