@@ -9,28 +9,51 @@ def print_board(board):
     for row in board:
         print((" ").join(row))
 
-def random_ship(board):
-    ship_row = randint(0, len(board) - 1)
-    ship_col = randint(0, len(board) - 1)
-    return ship_row, ship_col
+# creates random ships on board
+def random_row(board):
+    return randint(0, len(board) - 1)
+  
+   
+def random_col(board):
+     return randint(0, len(board) - 1)
+     
+    
+ship_row = random_row(board)
+ship_col = random_col(board)
 
+"""
+function to guess ships on board and to get information back
+on your guesses
 
+"""
 def guess_ship(board):
-    guess_row = int(input("Guess a row between 1-5: "))
-    guess_col = int(input("Guess a column between 1-5: "))
+    for turn in range(20):
+        print("turn", turn + 1)
 
-    if guess_row == ship_row and guess_col == ship_col:
-        print("Congrats you have sunk my battleship!")
+        guess_row = int(input("Guess a row between 1-5: "))
+        guess_col = int(input("Guess a column between 1-5: "))
 
-    else:
-        if (guess_row > 5) or (guess_col > 5):
-            print("You must guess a number between 1-5")
-        elif board[guess_row][guess_col] == "X":
-            print("You have guessed that.")
+        if guess_row == ship_row and guess_col == ship_col:
+            print("you sunk my battleship!")
+            board[guess_row][guess_col] = "@"
         else:
-            print("That's a miss!")
-            board[guess_row][guess_col] = "X"
-            
+            if (guess_row > 4) or (guess_col > 4):
+                print("you must guess between 1-5")
+            elif(board[guess_row][guess_col] == "X"):
+                print("You guessed that already")
+            else:
+                print("That's a miss!")
+                board[guess_row][guess_col] = "X"
+        print_board(board)
+    
+
+# main function to print game
+def main():
+    print_board(board)
+    random_row(board)
+    random_col(board)
+    guess_ship(board)
 
 
 
+main()
