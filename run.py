@@ -23,7 +23,7 @@ ship_col = random_col(board)
 
 username = input("please enter your name: ")
 print(f"hello {username} welcome to a game of battleships!")
-print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit!")
+print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit with 10 attempts!")
 
 
 """
@@ -32,25 +32,28 @@ on your guesses
 
 """
 def guess_ship(board):
-    for turn in range(20):
-        print("turn", turn + 1)
 
+    for turn in range(10):
+        print("turn", turn + 1)
+        
+        # ask the user to input a number
         guess_row = int(input("Guess a row between 0-4: "))
         guess_col = int(input("Guess a column between 0-4: "))
 
+        # checks if guess matches the random ship
         if guess_row == ship_row and guess_col == ship_col:
-            print("you sunk my battleship!")
+            print("well done! you sunk my battleship!")
             board[guess_row][guess_col] = "@"
+            break
         else:
-            if (guess_row > 4) or (guess_col > 4):
-                print("you must guess between 1-5")
+            if (guess_row not in range(5) or guess_col not in range(5)):
+                print("you must guess between 0-4")
             elif(board[guess_row][guess_col] == "X"):
                 print("You guessed that already")
             else:
                 print("That's a miss!")
                 board[guess_row][guess_col] = "X"
         print_board(board)
-    
 
 # main function to print game
 def main():
@@ -62,3 +65,4 @@ def main():
 
 
 main()
+
