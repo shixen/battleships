@@ -21,6 +21,11 @@ def random_col(board):
 ship_row = random_row(board)
 ship_col = random_col(board)
 
+username = input("please enter your name: ")
+print(f"hello {username} welcome to a game of battleships!")
+print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit!")
+
+
 """
 function to guess ships on board and to get information back
 on your guesses
@@ -30,8 +35,8 @@ def guess_ship(board):
     for turn in range(20):
         print("turn", turn + 1)
 
-        guess_row = int(input("Guess a row between 1-5: "))
-        guess_col = int(input("Guess a column between 1-5: "))
+        guess_row = int(input("Guess a row between 0-4: "))
+        guess_col = int(input("Guess a column between 0-4: "))
 
         if guess_row == ship_row and guess_col == ship_col:
             print("you sunk my battleship!")
