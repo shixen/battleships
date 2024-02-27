@@ -17,6 +17,10 @@ the same follows to enter a column 1-4
 once a turn is complete the map will show where you hit and tell you if its a miss or a hit
 this process is repeted untill 10 turns is made or the ship has been hit
 
+# Visitor goals
+* to understand the function of the game immediately
+* to finish the game without any confusion
+
 # Features
 * the user first gets to enter their username
 
@@ -38,16 +42,41 @@ this process is repeted untill 10 turns is made or the ship has been hit
 
 ![Skärmbild 2024-02-27 123546](https://github.com/shixen/battleships/assets/150827343/9b26d8bf-b11d-4c76-8886-a739fb2f13a6)
 
+# Technologies
+
+ ### languages used 
+ * python
+
+### programs used
+* github to store files and code
+* GitPod to build the game
+* heroku to deploy the game
+* pep8ci to validate the code
+
 # Design
 i decided to go with an simple approach to the game to keep it clean and simple at the same time
-i use X to mark where a miss was made because its easy to keep track of and simple to see.
+i use X to mark where a miss was made because its easy to keep track of and easy to see.
 and i used the @ to mark where the ship was when it was hit 
 and a 5x5 board to not overcomplicate things.
 
 # Testing
 the program has been tested by manually playing it to see if everything work as expected
-validation ?
+validation of code was used with [pep8ci](https://pep8ci.herokuapp.com/#)
 
 # Bugs
 no known bugs
+
+# Deployment
+the project was deplyoed using the code institute template for Heroku.
+### steps to deploy
+* fork or clone the repository of this game
+* Create a new heroku app on heroku
+* in settings on heroku add buildpack and add both heroku/python and heroku/nodejs
+* link the heroku app the the repository in the deploy tab
+* press deploy
+
+# Credits
+* code institute for the deployment terminal
+* my mentor Rory from code institute for feedback along this build
+
 
