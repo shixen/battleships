@@ -7,6 +7,8 @@ when the player uses all of the turns the game is over and an option to play aga
 
 ![battleship-game-power-point-template-games_91086_1](https://github.com/shixen/battleships/assets/150827343/85c56eff-193e-4911-bd7b-21f14e11720e)
 
+[link to game](https://niklas-battleships-24a50b536a5f.herokuapp.com/)
+
 # How to play
 user stars buy entering a username
 the users job is then to find the hidden ship on the map 
