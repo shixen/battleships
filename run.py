@@ -4,12 +4,16 @@ board = []
 # creates a board of 5x5 
 for x in range(0,5):
     board.append(["0"] * 5)
-
+"""
+makes the board look cleaner
+"""
 def print_board(board):
     for row in board:
         print((" ").join(row))
 
-# creates random ships on board
+"""
+generate a random ship to the board
+"""
 def random_row(board):
     return randint(0, len(board) - 1)
   
@@ -77,7 +81,9 @@ def guess_ship(board):
 
 
          
-# main function to print game
+""""
+main function to the game
+""""
 def main():
     print_board(board)
     random_row(board)
