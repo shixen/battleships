@@ -50,21 +50,24 @@ def guess_ship(board):
             print(f"well done! {username} you sunk my battleship!")
             board[guess_row][guess_col] = "@"
             print_board(board)
-            break
             
         else:
             if (guess_row not in range(5) or guess_col not in range(5)):
                 print("you must guess between 0-4")
+
             elif(board[guess_row][guess_col] == "X"):
                 print("You guessed that already")
+
             else:
                 print("That's a miss!")
                 board[guess_row][guess_col] = "X"
+            # ask player to play again when turns are out
             if turn == 9:
-                    play_again = input("play again ? y/n: ")
+                    play_again = input("Game over. play again ? y/n: ")
                     if play_again == "y":
                         main()
-      
+                        break
+                        
         print_board(board)
         
     
