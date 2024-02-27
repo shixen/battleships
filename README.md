@@ -42,6 +42,10 @@ this process is repeted untill 10 turns is made or the ship has been hit
 
 ![Skärmbild 2024-02-27 123546](https://github.com/shixen/battleships/assets/150827343/9b26d8bf-b11d-4c76-8886-a739fb2f13a6)
 
+### Future Features
+* player gets to place multiple ships and decide location
+* player and computer gets seperate boards and play against eachother
+
 # Technologies
 
  ### languages used 
