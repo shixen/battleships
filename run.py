@@ -16,12 +16,10 @@ generate a random ship to the board
 """
 def random_row(board):
     return randint(0, len(board) - 1)
-  
-   
+
 def random_col(board):
      return randint(0, len(board) - 1)
-     
-    
+
 ship_row = random_row(board)
 ship_col = random_col(board)
 
@@ -29,7 +27,6 @@ ship_col = random_col(board)
 username = input("please enter your name: ")
 print(f"hello {username} welcome to a game of battleships!")
 print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit with 10 attempts!")
-
 
 """
 function to guess ships on board and to get information back
@@ -73,23 +70,16 @@ def guess_ship(board):
                         main()
                         break
                         
-                        
-                        
             print_board(board)
         
-    
-
-
-         
-""""
-main function to the game
-""""
+"""
+main function for game
+"""
 def main():
     print_board(board)
     random_row(board)
     random_col(board)
     guess_ship(board)
-
 
 
 main()
