@@ -38,12 +38,16 @@ def guess_ship(board):
         print("turn", turn + 1)
 
         # ask the user to input a number
-        guess_row = int(input("Guess a row between 0-4: "))
-        guess_col = int(input("Guess a column between 0-4: "))
-          
+        try:
+            guess_row = int(input("Guess a row between 0-4: "))
+            guess_col = int(input("Guess a column between 0-4: "))
+        except ValueError:
+            print("must be numbers.")
+            continue
+            
         # checks if guess matches the random ship
         if guess_row == ship_row and guess_col == ship_col:
-            print("well done! you sunk my battleship!")
+            print(f"well done! {username} you sunk my battleship!")
             board[guess_row][guess_col] = "@"
             print_board(board)
             break
@@ -56,10 +60,17 @@ def guess_ship(board):
             else:
                 print("That's a miss!")
                 board[guess_row][guess_col] = "X"
-                if turn ==9:
-                    print("game over")
+            if turn == 9:
+                    play_again = input("play again ? y/n: ")
+                    if play_again == "y":
+                        main()
+      
         print_board(board)
+        
+    
 
+
+         
 # main function to print game
 def main():
     print_board(board)
