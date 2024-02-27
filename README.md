@@ -1,39 +1,51 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships
 
-Welcome,
+battleships is an board game and was first introduced as early as in world war 1 where soldiers would play this with a paper and a pencil.
+the point of the game is to guess a random hidden ship on the map.
+the player gets 10 turns to try and guess the ship by entering first a row between 0-4 followed by a column 0-4
+when the player uses all of the turns the game is over and an option to play again.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![battleship-game-power-point-template-games_91086_1](https://github.com/shixen/battleships/assets/150827343/85c56eff-193e-4911-bd7b-21f14e11720e)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+# How to play
+user stars buy entering a username
+the users job is then to find the hidden ship on the map 
+guesses are done by entering first a number between 1-4 to guess a row
+the same follows to enter a column 1-4
+once a turn is complete the map will show where you hit and tell you if its a miss or a hit
+this process is repeted untill 10 turns is made or the ship has been hit
 
-## Codeanywhere Reminders
+# Features
+* the user first gets to enter their username
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+![Skärmbild 2024-02-27 120318](https://github.com/shixen/battleships/assets/150827343/30130fc7-3bab-474b-b70f-82b18c307b1e)
 
-`python3 -m http.server`
+* the map then shows and user gets to enter first guess
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Skärmbild 2024-02-27 120336](https://github.com/shixen/battleships/assets/150827343/8a1ba48e-12a0-45ee-ad21-45e527743e24)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* the board then shows where you made your guess and marks it with an x
 
-`http_server`
+![Skärmbild 2024-02-27 120353](https://github.com/shixen/battleships/assets/150827343/332118ec-84a9-4ae1-80b0-a2f4be31035a)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* once all the turns are completed and no ship has been hit its game over.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Skärmbild 2024-02-27 120537](https://github.com/shixen/battleships/assets/150827343/980a3a9f-3284-4c98-b912-966cd7cba56e)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* if the battleship is hit it will mark it on the map and show where it was with (@)
 
-To log into the Heroku toolbelt CLI:
+![Skärmbild 2024-02-27 123546](https://github.com/shixen/battleships/assets/150827343/9b26d8bf-b11d-4c76-8886-a739fb2f13a6)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Design
+i decided to go with an simple approach to the game to keep it clean and simple at the same time
+i use X to mark where a miss was made because its easy to keep track of and simple to see.
+and i used the @ to mark where the ship was when it was hit 
+and a 5x5 board to not overcomplicate things.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# Testing
+the program has been tested by manually playing it to see if everything work as expected
+validation ?
 
----
+# Bugs
+no known bugs
 
-Happy coding!
