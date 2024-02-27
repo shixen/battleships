@@ -50,7 +50,8 @@ def guess_ship(board):
             print(f"well done! {username} you sunk my battleship!")
             board[guess_row][guess_col] = "@"
             print_board(board)
-            
+            break   
+
         else:
             if (guess_row not in range(5) or guess_col not in range(5)):
                 print("you must guess between 0-4")
@@ -68,7 +69,9 @@ def guess_ship(board):
                         main()
                         break
                         
-        print_board(board)
+                        
+                        
+            print_board(board)
         
     
 
