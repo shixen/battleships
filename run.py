@@ -1,9 +1,10 @@
 from random import randint
 
-board = []
-# creates a board of 5x5 
-for x in range(0,5):
-    board.append(["0"] * 5)
+board_map = []
+# creates a board of 5x5
+def create_board(board):
+    for x in range(0,5):
+        board.append(["0"] * 5)
 """
 makes the board look cleaner
 """
@@ -19,14 +20,18 @@ def random_row(board):
 
 def random_col(board):
      return randint(0, len(board) - 1)
+def start_game(board):
+    global ship_row
+    global ship_col
+    ship_row = random_row(board)
+    ship_col = random_col(board)
+    
 
-ship_row = random_row(board)
-ship_col = random_col(board)
+    global username
+    username = input("please enter your name: ")
+    print(f"hello {username} welcome to a game of battleships!")
+    print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit with 10 attempts!")
 
-# ask for username and display rules for game
-username = input("please enter your name: ")
-print(f"hello {username} welcome to a game of battleships!")
-print("There is a hidden ship on the board and your job is to guess a number between 0-4 untill you hit with 10 attempts!")
 
 """
 function to guess ships on board and to get information back
@@ -67,19 +72,23 @@ def guess_ship(board):
             if turn == 9:
                     play_again = input("Game over. play again ? y/n: ")
                     if play_again == "y":
+                        global board_map
+                        board_map = []
                         main()
                         break
                         
-            print_board(board)
+            print_board(board_map)
         
 """
 main function for game
 """
 def main():
-    print_board(board)
-    random_row(board)
-    random_col(board)
-    guess_ship(board)
+    create_board(board_map)
+    start_game(board_map)
+    print_board(board_map)
+    random_row(board_map)
+    random_col(board_map)
+    guess_ship(board_map)
 
 
 main()
